@@ -6,6 +6,10 @@
 
 #### 1. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html! <br>
 
+Bagan berisi request client ke web aplikasi:
+
+<img width="610" alt="Screenshot 2022-09-13 151646" src="https://user-images.githubusercontent.com/91789098/189849032-7889977d-0964-43be-8a4b-cb508c712254.png">
+
 Hubungan `urls.py` dengan `views.py` adalah hubungan passing. Hal yang di passing merupakan HTTP Request yang user inginkan agar `views.py` dapat memberikan respon yang tepat. Contohnya, apabila user menginginkan untuk **GET** data dari suatu URL yang dibuat dan dihubungkan dengan suatu fungsi/class di `views.py` maka itulah hubungan passing yang dilakukan. Sehingga `views.py` dan `urls.py` saling membutuhkan satu sama lain agar bisa saling menyalurkan informasi, sehingga informasi tersebut bisa diperlihatkan kepada user.
 
 `models.py` dan `urls.py` tidak berhubungan secara langsung namun dihubungkan melewati fungsi/class pada `views.py`. Model ini diperlihatkan untuk memberikan data yang ingin dikeluarkan/dimasukkan melewati views. Maksud dikeluarkan/dimasukkan, akan saya berikan contoh. Contoh, apabila user menginginkan untuk **GET**, maka apabila data model dipanggil, models akan memberikan data yang sudah ada kepada views agar kedepannya mungkin akan digunakan itu.
