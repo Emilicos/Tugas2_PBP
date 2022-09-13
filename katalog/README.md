@@ -1,6 +1,6 @@
 # Tugas 2 
 
-## Link to [Heroku](https://pbp-tugas2-alvaro.herokuapp.com/)
+## Link to 👉 [Heroku](https://pbp-tugas2-alvaro.herokuapp.com/) 👈
 
 ### Soal
 
