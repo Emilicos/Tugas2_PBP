@@ -33,3 +33,6 @@ Setelah saya membuat models dan data JSON, saya membuat views.py berdasarkan mod
 Untuk views, saya lakukan hal yang sama dengan tutorial minggu lalu untuk menambahkan XML dan JSON. Untuk itu, saya tinggal menghubungkan fungsi yang telah saya buat kepada URL. Lalu tinggal saya lakukan `python maange.py runserver 8000` untuk cek apakah sudah benar atau belum. 
 
 ### Screenshot Postman
+<img width="970" alt="Postman_HTML" src="https://user-images.githubusercontent.com/91789098/190676324-5b774c17-d067-4fba-8981-2130309260e0.png">
+<img width="965" alt="Postman_JSON" src="https://user-images.githubusercontent.com/91789098/190676335-773337a8-37ba-498b-8e84-8363685a8cc7.png">
+<img width="969" alt="Postman_XML" src="https://user-images.githubusercontent.com/91789098/190676336-633ad7f8-5e75-4ed7-a2fb-b17bfe1fbd73.png">
