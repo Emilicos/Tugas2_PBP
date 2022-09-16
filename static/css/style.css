@@ -1,7 +1,18 @@
+body{
+    background-color:cornsilk;
+}
+
 table{
-    border: 2px solid red;
+    border: 2px solid black;
 }
 
 tr, th {
-    border: 2px solid red;
+    border: 2px solid black;
+    padding: 0.5em 2em;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
 }
