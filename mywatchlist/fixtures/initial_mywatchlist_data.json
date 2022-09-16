@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 1,
+        "fields": {
+            "watched": false, 
+            "title": "Titanic",
+            "rating": 3, 
+            "release_date": "1998-01-05",
+            "review": "Rose mati lemas, saat bermain sebagai gadis masyarakat elit, menghadiri pesta, berdandan dan terus-menerus dicermati. Ketika dia bertemu Jack di kapal Titanic, hidupnya berubah untuk selamanya."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 2,
+        "fields": {
+            "watched": true, 
+            "title": "Spirited Away",
+            "rating": 5, 
+            "release_date": "2001-07-20",
+            "review": "Spirited Away merupakan salah satu anime movie yang sangat terkenal. Pada film ini kita diajarkan untuk bertekad kuat dan membantu sesama."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 3,
+        "fields": {
+            "watched": true, 
+            "title": "Knives Out",
+            "rating": 5, 
+            "release_date": "2001-07-20",
+            "review": "Film yang bermain dengan perasaan serta pikiran!"
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 4,
+        "fields": {
+            "watched": true, 
+            "title": "Aladdin",
+            "rating": 3, 
+            "release_date": "2019-05-24",
+            "review": "Meskipun berkisah drama, namun beberapa penggalan cerita Aladdin memiliki unsur komedi, yang akhirnya membuat penonton di dalam bioksop tertawa. Film yang digarap Guy Ritchie ini akan membuat para penggemar mengingat kisah Aladdin yang fenomenal."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 5,
+        "fields": {
+            "watched": false, 
+            "title": "Dilan 1991",
+            "rating": 4, 
+            "release_date": "2019-02-28",
+            "review": "Selain kisah cinta, film ini lebih berat karena ada hubungan anak dan orangtua dengan menampilkan beberapa pilihan gaya parenting. Untungnya, Dilan 1991 tidak meninggalkan tugasnya sebagai tontonan yang menghibur meskipun sarat pesan terselubung."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 6,
+        "fields": {
+            "watched": true, 
+            "title": "Makmum 2",
+            "rating": 2, 
+            "release_date": "2021-12-30",
+            "review": "Makmum 2 mudah saja diterima berkat ceritanya dekat dengan masyarakat Indonesia yang mayoritas Muslim dan pastinya familier dengan aktivitas salat. Selentingan soal hantu makmum yang kerap terdengar adalah sinyal kuat untuk terkoneksi dengan penonton. Kekuatan film ini memang terletak pada dua pertiga awal yang intens. Penonton seolah digiring masuk ke labirin teror. Meski babak akhir terkesan berlebih, penonton yang kadung terjebak tak mungkin berbalik arah. Tuntaskan hingga ke menit akhir."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 7,
+        "fields": {
+            "watched": false, 
+            "title": "Follow Me",
+            "rating": 1, 
+            "release_date": "2021-11-26",
+            "review": "Kondisi ini kemudian dikaitkan dengan akhir adegan. Di luar itu, materi kengerian yang disajikan Follow Me masih menarik diikuti. Sejumlah “wahana” menyimpan kengerian yang terasa riil, bikin pelaku dan penonton gemetaran. Will cukup cerdik menyimpan kejutan hingga ke babak akhir. Andai penyuntingan lebih gesit, tempo cerita tentu lebih bergegas dan sukses bikin penonton tahan napas. Jika butuh hiburan ringkas dengan efek sensasi ketar-ketir, Follow Me dengan kisah yang ringan dan ringkas bisa dilirik."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 8,
+        "fields": {
+            "watched": true, 
+            "title": "Filosofi Kopi",
+            "rating": 3, 
+            "release_date": "2015-04-09",
+            "review": "Alur cerita Filosofi Kopi dalam film, berkesan sederhana tapi menyampaikan banyak hal.Terutama jika Anda pecinta kopi, film ini akan punya nilai tersendiri untuk Anda. Bagaimana secangkir kopi dibuat kemudian menceritakan berbagai momen dengan kesan berbeda bagi tiap penikmatnya. Mungkin film ini berubah menjadi terasa membosankan jika penontonnya sendiri tidak terlalu tertarik dengan dunia kopi, tetapi tetap masih ada nilai lain yang ditawarkan seperti pesan moral kekeluargaan, persahabatan, kesederhanaan, dan lain-lain."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 9,
+        "fields": {
+            "watched": false, 
+            "title": "Tusuk Jelangkung di Lubang Buaya",
+            "rating": 1, 
+            "release_date": "2018-12-03",
+            "review": "Tusuk Jelangkung berani keluar dari pengkotakan mayoritas muslim di Indonesia. Film ini mengambil budaya sebagai jalan untuk melawan setan atau penampakan lain di dalam film. Sayangnya, semua serba tanggung. Unsur budaya tidak dimaksimalkan baik melalui kostum, gesture, lisan, semua serba tanggung hingga akhir kisah."
+        }
+    },
+    {
+        "model": "mywatchlist.mywatchlist",
+        "pk": 10,
+        "fields": {
+            "watched": true, 
+            "title": "Lamaran",
+            "rating": 2, 
+            "release_date": "2015-07-15",
+            "review": "Film arahan sutradara Monty Tiwa ini sebenarnya menyajikan tema yang sederhana. Yaitu benturan dua pribadi dan dua budaya, Batak dan Sunda. Namun dari ide sederhana kalau dikemas dengan baik dan pas bisa menjadi sesuatu yang menarik dan menghibur. Hal itu mampu dieksekusi dengan baik oleh penulis skenario maupun sutradara."
+        }
+    }
+]
