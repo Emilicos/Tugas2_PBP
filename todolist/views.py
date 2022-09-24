@@ -11,7 +11,7 @@ from todolist.models import Task
 
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.filter(user = request.user)
     context = {
         "nama": "Alvaro Austin",
         "tasks": tasks,
@@ -34,15 +34,17 @@ def create_task(request):
 
 @login_required(login_url='/todolist/login/')
 def change_task_status(request, pk):
-    if(Task.objects.get(pk = pk).is_finished == True):
+    if(Task.objects.get(pk = pk).is_finished == True and Task.objects.get(pk=pk).user == request.user):
         Task.objects.filter(pk = pk).update(is_finished = False)
     else:
-        Task.objects.filter(pk = pk).update(is_finished = True)
+        if(Task.objects.get(pk=pk).user == request.user):
+            Task.objects.filter(pk = pk).update(is_finished = True)
     return redirect('todolist:show_todolist')
 
 @login_required(login_url='/todolist/login/')
 def delete_task(request, pk):
-    Task.objects.filter(pk = pk).delete()
+    if(Task.objects.get(pk=pk).user == request.user):
+        Task.objects.filter(pk = pk).delete()
     return redirect('todolist:show_todolist')
 
 def register(request):
