@@ -10,6 +10,8 @@ Kegunaan dari `{% csrf_token %}` adalah untuk mencegah serangan pada website kit
 #### 2. Apakah kita dapat membuat elemen <form> secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual. <br>
 Tentu saja kita bisa membuat elemen secara manual tanpa menggunakan generator. Namun apabila kita membuat form kita sendiri akan menyulitkan developer. Seperti yang kita pelajari pada awal-awal minggu di PBP, lebih baik untuk tidak menyulitkan developer, kita bisa saja menggunakan form yang telah disediakan oleh Django itu sendiri. Django memiliki banyak sekali method yang sangat berguna untuk mempermudahkan pekerjaan developer Django. Tanpa generator table, Template Django tidak dapat mengetahui bagaimana cara merender HTML Output. Walaupun kita bisa melihat hasil, namun tidak akan menjadi indah. Saya membuat form saya sendiri dalam mengerjakan `create-task`. Terlihat bahwa akan lebih sulit untuk membuat form sendiri walaupun sudah ada method. 
 
+<img width="638" alt="Diagram_Form_Manual" src="https://user-images.githubusercontent.com/91789098/192094383-05bdbb45-ed4b-4ed4-a911-c131242c89b2.png">
+
 Saya memberikan gambaran diatas bagaimana kita bisa form bekerja, dan akan saya jelaskan bagaimana form bekerja secara manual. Gambar tersebut saya dapatkan dari [website ini](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms). Apabila kita membuat form secara manual banyak sekali step yang harus dilakukan. Pertama browser harus request page dari form yang ada lalu dari request tersebut form akan diupdate. Setelah diupdate maka form tersebut akan dikirimkan ke URL untuk divalidate datanya apabila belum. Apabila data valid maka browser akan menredirect kita ke URL yang success. Namun apabila gagal, maka Django akan memberikan pesan bahwa data tersebut gagal. 
 
 Oleh karena itu apabila kita membuat form secara manual maka kita harus mengimplementasikan segala sesuatu tersebut. Apabila kita memakai generator maka tugas kita akan jauh lebih cepat diselesaikan. 
@@ -21,3 +23,11 @@ Awal-awal user diperintahkan untuk mengisi form yang ada pada saat kita submit m
 #### 4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
 
 Awal-awal saya membuka virtual environment saya terlebih dahulu berdasarkan `env\Scripts\activate`. Setelah terbuka saya lalu melakukan `python manage.py startapp todolist` untuk membuat aplikasi baru pada project django kita. Setelah itu saya ubah url seperti tugas-tugas sebelumnya. Lalu saya buat semuah model bernama **Task** untuk memberikan schema kepada database kita. Lalu saya menggunakan kode pada lab 3 untuk membuat fungsi login, register, dan logout. Saya memuat user, tabel, dan button yang diinginkan. Lalu saya membuat file baru bernama `forms.py` untuk memudahkan saya validate data yang dinginkan, setelah valid saya save data tersebut ke database kita. Namun user dan date tidak ada dalam input type sehingga saya harus memasukkan user instance secara manual dan menambahkan auto add pada field model di `models.py` saya. Saya menggunakan method **forms.Model** untuk memberikan metaclass agar model dapat digunakan dengan baik. Lalu saya perbaiki routing saya agar sesuai dengan tugas. Kemudian saya buka heroku dan membuat dummy data. Saya juga mengerjakan bonus dengan membuat fungsi baru yaitu **change_task_status** agar melakukan proses PUT (Update). Lalu saya membuat fungsi lagi bernama **delete_task** untuk mendelete data sedsuai dengan pk (primary key) yang saya dapat dari context pada HMTL. Lalu saya mengerjakan readme ini :D.  
+
+Dummy user saya:
+
+Username: 123
+Password: pbpkelasd
+
+Username: 1234
+Password: pbpkelasd
