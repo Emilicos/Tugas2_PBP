@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+  <h1>Tugas 4 Assignment PBP/PBD</h1>
+
+  <h5>Name: </h5>
+  <p> {{nama}}</p>
+
+  <h5>Student ID: </h5>
+  <p> {{student_id}} </p>
+
+  <h5> User sekarang: </h5>
+  <p> {{user}} </p>
+
+  <table>
+    <tr>
+      <th> Created </th>
+      <th> Judul </th>
+      <th> Deskripsi  </th>
+      <th> Author </th>
+      <th> Status Pekerjaan </th>
+      <th> Ganti Status Pekerjaan </th>
+      <th> Hapus Data </th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for task in tasks %}
+      <tr class = "nobold">
+        <th>{{task.date}} </th>
+        <th>{{task.title}} </th>
+        <th>{{task.description}} </th>
+        <th>{{task.user}} </th>
+        {% if task.is_finished %}
+          <th> Selesai </th>
+        {% else %}
+          <th> Belum Selesai </th>
+        {% endif %}
+        <th> <button><a href="{% url 'todolist:change-task-status' task.id %}"> Ganti Status Pekerjaan </a></button> </th>
+        <th> <button><a href="{% url 'todolist:delete-task' task.id%}"> Hapus Data </a></button> </th>
+      </tr>
+    {% endfor %}
+  </table>
+
+<button><a href="{% url 'todolist:create-task' %}"> Create Task </a></button>
+
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+ {% endblock content %}

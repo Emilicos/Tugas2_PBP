@@ -16,3 +16,7 @@ h2{
     font-weight: bold;
     text-align: center;
 }
+
+input{
+    padding: 0.75em 1.5em;
+}
