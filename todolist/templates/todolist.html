@@ -1,47 +1,37 @@
 {% extends 'base.html' %}
 
  {% block content %}
+ <div class = "flex flex-col items-center">
+  <div class = "text-center">
+    <h1 class = "text-4xl font-bold"> To Do List </h1>
+    <p class = "text-xl">  By: {{user}} </p>
+  </div>
 
-  <h1>Tugas 4 Assignment PBP/PBD</h1>
-
-  <h5>Name: </h5>
-  <p> {{nama}}</p>
-
-  <h5>Student ID: </h5>
-  <p> {{student_id}} </p>
-
-  <h5> User sekarang: </h5>
-  <p> {{user}} </p>
-
-  <table>
-    <tr>
-      <th> Created </th>
-      <th> Judul </th>
-      <th> Deskripsi  </th>
-      <th> Author </th>
-      <th> Status Pekerjaan </th>
-      <th> Ganti Status Pekerjaan </th>
-      <th> Hapus Data </th>
-    </tr>
-    {% comment %} Add the data below this line {% endcomment %}
+  <div class = "flex flex-wrap justify-center gap-x-8">
     {% for task in tasks %}
-      <tr class = "nobold">
-        <th>{{task.date}} </th>
-        <th>{{task.title}} </th>
-        <th>{{task.description}} </th>
-        <th>{{task.user}} </th>
-        {% if task.is_finished %}
-          <th> Selesai </th>
-        {% else %}
-          <th> Belum Selesai </th>
-        {% endif %}
-        <th> <button><a href="{% url 'todolist:change-task-status' task.id %}"> Ganti Status Pekerjaan </a></button> </th>
-        <th> <button><a href="{% url 'todolist:delete-task' task.id%}"> Hapus Data </a></button> </th>
-      </tr>
+      <div class = "w-full max-w-360px my-8 flex flex-col login-color box-shadow p-8 animation cursor-pointer">
+          <h1 class = "text-2xl font-bold text-left capitalize">{{task.title}} </h1>
+          <p class = "text-grey">{{task.description}} </p>
+        <div class = "flex justify-between">
+          <p class = "text-bluetext font-bold">{{task.date}} </p>
+          {% if task.is_finished %}
+            <p class = "text-green font-bold"> Selesai </p>
+          {% else %}
+            <p class = "text-red font-bold"> Belum Selesai </p>
+          {% endif %}
+        </div>
+          <div class = "flex gap-x-8">
+            <button class="btn btn-success w-full"><a href="{% url 'todolist:change-task-status' task.id %}" class = "text-white font-bold"> Ganti Status Pekerjaan </a></button>
+            <button class="btn btn-danger w-full"><a href="{% url 'todolist:delete-task' task.id%}" class = "text-white font-bold"> Hapus Data </a></button>
+          </div>
+
+      </div>
     {% endfor %}
-  </table>
-
-<button><a href="{% url 'todolist:create-task' %}"> Create Task </a></button>
-
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+    </div>
+<div className = "gap-x-8">
+  <button class="btn btn-success w-full"><a href="{% url 'todolist:create-task' %}" class = "text-white font-bold"> Create Task </a></button>
+  
+  <button class="btn btn-danger w-full"><a href="{% url 'todolist:logout' %}" class = "text-white font-bold">Logout</a></button>
+</div>
+</div>
  {% endblock content %}

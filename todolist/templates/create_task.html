@@ -6,30 +6,30 @@
 
 {% block content %}
 
-<div>
+<div class = "flex flex-col items-center justify-center position-center login-color box-shadow">
+    <div class = "login rounded-md font-bold p-8 w-full max-w-720px">
+        <h1 class = "text-center">Create Task</h1>
 
-    <h1>Create Task</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class = "p-8">
+                <div class = "my-4">
+                    <p>Title: </p>
+                    <input type="text" name="title" placeholder="Title" class="form-control">
+                
+                </div>
+                        
+                <div class = "my-4">
+                    <p>Description: </p>
+                    <input type="description" name="description" placeholder="Description" class="form-control">
+                </div>
 
-    <form method="POST" action="">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>Title: </td>
-                <td><input type="text" name="title" placeholder="Title" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Description: </td>
-                <td><input type="description" name="description" placeholder="Description" class="form-control"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn" type="submit" value="Submit"></td>
-            </tr>
-        </table>
-    </form>
-     
+                <div class = "text-center">
+                    <button class="btn btn-primary w-full" type="submit"> Create Task </button>
+                </div>
+            </div>
+        </form>
+     </div>
 </div>
 
 {% endblock content %}
